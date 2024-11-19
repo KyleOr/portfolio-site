@@ -1,0 +1,123 @@
+/* LoadingScreen.module.css */
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.loadingScreen {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #322C2B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  transition: transform 1.5s ease-in-out;
+}
+
+.secondaryLayer {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #803D3B;
+  opacity: 0.9;
+  z-index: 9998;
+}
+
+.thirdLayer {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #AF8260;
+  opacity: 0.85;
+  z-index: 9997;
+}
+
+.fourthLayer {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #E4C59E;
+  opacity: 0.8;
+  z-index: 9996;
+}
+
+.counter {
+  display: flex;
+  font-size: 10rem;
+  font-family: monospace, sans-serif;
+  color: #b3b3b3;
+}
+
+.digitSlot {
+  overflow: hidden;
+  height: 10rem;
+  width: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.digit {
+  display: inline-block;
+  animation: slotScroll 0.2s ease-in-out;
+}
+
+.percentSign {
+  margin-left: 0.5rem;
+  font-size: 10rem;
+}
+
+/* Slide-down animations */
+.slideDown {
+  animation: slideDownEffect 1.5s forwards;
+}
+
+.slideDownCascade1 {
+  animation: slideDownEffect 1.5s forwards;
+  animation-delay: 0.5s;
+}
+
+.slideDownCascade2 {
+  animation: slideDownEffect 1.5s forwards;
+  animation-delay: 1s;
+}
+
+.slideDownCascade3 {
+  animation: slideDownEffect 1.5s forwards;
+  animation-delay: 1.5s;
+}
+
+/* Keyframes */
+@keyframes slideDownEffect {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes slotScroll {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(10%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
